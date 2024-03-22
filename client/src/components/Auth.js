@@ -14,7 +14,7 @@ export default function Auth(){
     const {name, value} = e.target
     setInputs(prevInputs => ({
       ...prevInputs,
-      [name]: value
+      [name]: value 
     }))
   }
 
