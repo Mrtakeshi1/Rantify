@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 mongoose.set('strictQuery', false)
 mongoose.connect(
   process.env.MONGO_URL,
-  () => console.log('Connected to the DB')
+  { useNewUrlParser: true }
 )
 
 app.use('/auth', require('./routes/authRouter.js'))
