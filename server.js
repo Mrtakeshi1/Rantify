@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 mongoose.set('strictQuery', false)
 mongoose.connect(
-  'mongodb+srv://garciatakeshi:Mr.takes9308@cluster0.p9vr3vv.mongodb.net/',
+  process.env.MONGO_URL,
   () => console.log('Connected to the DB')
 )
 
