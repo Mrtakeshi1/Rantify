@@ -17,7 +17,7 @@ authRouter.post("/signup", (req, res, next) => {
     const newUser = new User(req.body)
     newUser.save((err, savedUser) => {
       if(err){
-        res.status(500)
+        res.status(500) 
         return next(err)
       }
                             // payload,            // secret
