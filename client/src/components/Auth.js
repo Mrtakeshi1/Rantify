@@ -37,7 +37,7 @@ export default function Auth(){
 
   return (
     <div className="auth-container">
-      <h1>Post App</h1>
+      <h1>Rantify App</h1>
       { !toggle ?
         <>
           <AuthForm 
