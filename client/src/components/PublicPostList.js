@@ -15,7 +15,7 @@ function PublicPostList() {
   const postsWithComments = sortedPosts.map(post => (
     <div key={post._id} className="post-container">
       <div className="post-wrapper">
-        <h3>{username}</h3>
+        <h3>{post.userName}</h3>
         <Posts
           key={post._id}
           title={post.title}

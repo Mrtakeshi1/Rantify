@@ -26,7 +26,10 @@ const postSchema = new Schema({
     dislikedUsers:[{
         type: Schema.Types.ObjectId,
         ref: "User"
-    }]
+    }],
+    userName:{
+        type: String
+    }
 })
 
 module.exports = mongoose.model("Post", postSchema)

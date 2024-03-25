@@ -30,8 +30,10 @@ postRouter.get('/user', (req, res, next) => {
 // Add New Posts
 
 postRouter.post('/', (req, res, next) => {
+    req.body.userName = req.auth.username
     req.body.user = req.auth._id
     const newPost = new post(req.body)
+    console.log(newPost)
     newPost.save((err, savedPost) => {
         if(err){
             res.status(500)
