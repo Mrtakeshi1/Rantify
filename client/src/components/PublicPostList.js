@@ -1,10 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Posts from './Posts';
 import CommentSection from './CommentSection.js';
 import { UserContext } from '../context/UserProvider';
 
 function PublicPostList() {
-  const { user: {username}, allPosts, downVotePost, upVotePost} = useContext(UserContext);
+  const { user: {username}, allPosts, downVotePost, upVotePost, getAllPosts} = useContext(UserContext);
+
+  useEffect(()=>{
+    getAllPosts()
+}, [])
 
   const sortedPosts = allPosts.sort((a, b) => {
     const aUpVotes = a.likedUsers.length - a.dislikedUsers.length;

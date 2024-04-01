@@ -1,12 +1,15 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { UserContext } from "../context/UserProvider.js"
 import PostForm from "./PostForm.js"
 import UserPostList from "./UserPostList.js"
 
 function Profile(){
 
-    const {user: {username}, addPost, posts, downVotePost, upVotePost } = useContext(UserContext)
-
+    const {user: {username}, addPost, posts, downVotePost, upVotePost, getUserPosts} = useContext(UserContext)
+    useEffect(()=>{
+        getUserPosts()
+    }, [])
+    
     return(
         <div>
 

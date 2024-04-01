@@ -163,6 +163,8 @@ export default function UserProvider(props){
                 resetAuthErr,
                 allPosts,
                 upKeepPosts,
+                getAllPosts,
+                getUserPosts,
                 upVotePost,
                 downVotePost,
                 deletePost
