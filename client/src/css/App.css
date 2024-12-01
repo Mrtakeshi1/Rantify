@@ -108,6 +108,8 @@ body{
 .post-form-container > textarea{
   margin-bottom: 10px;
   width: 300px;
+  padding-top: 1%;
+
 }
 
 /* Profile */
