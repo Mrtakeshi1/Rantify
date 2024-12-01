@@ -4,7 +4,7 @@ import CommentSection from './CommentSection.js';
 import { UserContext } from '../context/UserProvider';
 
 function PublicPostList() {
-  const { user: {username}, allPosts, downVotePost, upVotePost, getAllPosts} = useContext(UserContext);
+  const { user: {username}, allPosts, downVotePost, upVotePost} = useContext(UserContext);
 
   useEffect(()=>{
     getAllPosts()
